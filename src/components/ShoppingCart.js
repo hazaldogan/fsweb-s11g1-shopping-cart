@@ -18,8 +18,8 @@ const ShoppingCart = () => {
 
   return (
     <div>
-      {cart.map((item) => (
-        <Item key={item.id} {...item} />
+      {cart.map((item, index) => (
+        <Item key={`${item.id}${index}`} {...item} index={index} />
       ))}
 
       <ScCartCheckout>

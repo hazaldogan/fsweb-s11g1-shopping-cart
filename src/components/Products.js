@@ -21,11 +21,11 @@ const ScProducts = styled.section`
 `;
 
 const Products = () => {
-  const { products, addItem } = useContext(ProductContext);
+  const { products } = useContext(ProductContext);
   return (
     <ScProducts>
       {products.map((product) => (
-        <Product key={product.id} product={product} addItem={addItem} />
+        <Product key={product.id} product={product} />
       ))}
     </ScProducts>
   );
